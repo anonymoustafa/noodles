@@ -1,0 +1,11 @@
+{
+ "NodeJS": {
+  "metadata": {
+   "version": "1.0",
+   "ide": "CodeLite20505",
+   "type": "NodeJS"
+  },
+  "folders": ["."],
+  "m_showHiddenFiles": false
+ }
+}
