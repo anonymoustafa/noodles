@@ -6,7 +6,7 @@
     <TabInfo>
       <wxString Value="/home/mostafa/Documents/local-repositories/noodles/06/app.js" Name="FileName"/>
       <int Value="0" Name="FirstVisibleLine"/>
-      <int Value="5" Name="CurrentLine"/>
+      <int Value="0" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
     </TabInfo>

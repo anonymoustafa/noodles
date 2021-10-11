@@ -2,7 +2,13 @@ var http = require('http');
 var fs = require('fs');
 
 
-fs.appendFile('a.txt', 'contents ', function (err) {
-  if (err) throw err;
-  console.log('saved :)');
+  http.createServer(function (req, res) {
+
+      fs.appendFile("boobs.txt","123 " ,function (err) {
+          if (err) throw err;
+
+  res.writeHead(200, { "Content-Type": "text/html" });
+  res.write("saved!");
+  res.end();
 });
+}).listen(8080);
