@@ -1,12 +1,10 @@
 var http = require('http');
-var url = require('url');
+var fs = require('fs');
 
-http.createServer(function (porsesh, pasokh) {
-  pasokh.writeHead(200, {'Content-Type': 'text/plain'});
-  var q = url.parse(porsesh.url, true).query;
-  var dat3 = q.year + " " + q.month;
-  pasokh.write(dat3);
-  pasokh.end();
-}).listen(8080);
-
-// http://localhost:8080/?year=2017&month=July
+http.createServer(function (req, res) {
+  fs.readFile('demofile1.html', function (err, data) {
+    res.writeHead(200, { 'Content-Type': 'text/html' });
+    res.write(data);
+    return res.end();
+  });
+}).listen(5999); 
