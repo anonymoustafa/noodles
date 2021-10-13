@@ -1,11 +1,11 @@
-var http = require('http');
 var fs = require('fs');
 
+fs.appendFile('fuck_billy_boys.txt', 'demofile1.html', function (err) {
+  if (err) throw err;
+  console.log('saved!');
+});
 
-http.createServer(function (req, res) {
-  fs.readFile('demofile1.html', function (err, data) {
-    res.writeHead(200, { 'Content-Type': 'text/html' });
-    res.write(data);
-    res.end();
-  });
-}).listen(8080);
+fs.appendFile('../george.txt', 'george 15th bd was yesterday! ', function (err) {
+  if (err) throw err;
+  console.log('George saved too!');
+});
