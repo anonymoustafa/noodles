@@ -1,11 +1,29 @@
 var fs = require('fs');
+var readline = require('readline');
 
-fs.appendFile('fuck_billy_boys.txt', 'demofile1.html', function (err) {
-  if (err) throw err;
-  console.log('saved!');
+
+
+var rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout
 });
 
-fs.appendFile('../george.txt', 'george 15th bd was yesterday! ', function (err) {
+var locationier = function () {
+  return "a.txt";
+};
+
+
+var aboundance = function (/* initial_amount, duration */) {
+  rl.question("What is the initial amount? ", function (initial_amount) { rl.close();});
+  let counter = 0;
+  for (let index = 1; index <= 365; index++) {
+    counter += 
+  }
+  return counter;
+};
+
+fs.writeFile(locationier(), aboundance().toString()+" ", function (err) {
   if (err) throw err;
-  console.log('George saved too!');
+  console.log('calculated annd saved!');
 });
+
