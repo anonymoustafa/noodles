@@ -1,29 +1,22 @@
 var fs = require('fs');
-var readline = require('readline');
+var http = require('http');
+var url = require('url');
+
+http.createServer(function (req,res) {
+    var q = url.parse(req.url,true);
+    var filename = "." + q.pathname;
+    fs.readFile(filename,function (err,data) {
+        if (err){
+            res.writeHead(404,{'Content-Type':'text/html'})
+            res.write("not found!");
+            res.end();
+        }
+
+        res.writeHead(200,{'Content-Type':'text/html'});
+        res.write(data);
+        res.end();
+    })
 
 
-
-var rl = readline.createInterface({
-  input: process.stdin,
-  output: process.stdout
-});
-
-var locationier = function () {
-  return "a.txt";
-};
-
-
-var aboundance = function (/* initial_amount, duration */) {
-  rl.question("What is the initial amount? ", function (initial_amount) { rl.close();});
-  let counter = 0;
-  for (let index = 1; index <= 365; index++) {
-    counter += 
-  }
-  return counter;
-};
-
-fs.writeFile(locationier(), aboundance().toString()+" ", function (err) {
-  if (err) throw err;
-  console.log('calculated annd saved!');
-});
+}).listen(1404);
 
