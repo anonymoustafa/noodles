@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/anonymoustafa/noodles/issues"
   },
-  "homepage": "https://github.com/anonymoustafa/noodles#readme"
+  "homepage": "https://github.com/anonymoustafa/noodles#readme",
+  "dependencies": {
+    "validator": "^13.7.0"
+  }
 }

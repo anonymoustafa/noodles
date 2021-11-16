@@ -1,14 +1,7 @@
-import { createServer } from 'http';
+const validator = require('validator');
+const get_notes = require('./notes.js');
 
-const hostname = '127.0.0.1';
-const port = 3000;
 
-const server = createServer((req, res) => {
-  res.statusCode = 200;
-  res.setHeader('Content-Type', 'text/plain');
-  res.end('Hello World');
-});
-
-server.listen(port, hostname, () => {
-  console.log(`Server running at http://${hostname}:${port}/`);
-});
+const messages = get_notes();
+console.log(messages);
+console.log(validator.isEmail('anonymoustafa@outlook.com'));
