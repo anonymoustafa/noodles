@@ -1,8 +1,0 @@
-{
- "m_debuggerPort": 5858,
- "m_debuggerHost": "127.0.0.1",
- "m_scriptToExecute": "/home/mostafa/Documents/local-repositories/noodles/06/app.js",
- "m_commandLineArgs": [],
- "m_workingDirectory": "/home/mostafa/Documents/local-repositories/noodles/06",
- "m_breakpoints": []
-}
