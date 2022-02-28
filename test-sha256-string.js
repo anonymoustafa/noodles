@@ -1,3 +1,5 @@
-const sha256_string = require('sha256');
+#!/usr/bin/env node
 
+
+const sha256_string = require('sha256');
 console.log(sha256_string('mostafa'));
