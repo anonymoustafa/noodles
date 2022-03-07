@@ -1,9 +1,19 @@
-const loglog = require('./logger.js');
-const logloglog = new loglog();
+const http = require('http')
 
-logloglog.on('logger-message', function(arguments) {
+const port = process.env.PORT || 3000
 
-        console.log('message loged finally', arguments);
-});
+const server = http.createServer((req, res) => {
+  res.statusCode = 200
+  res.setHeader('Content-Type', 'text/html')
+  res.end('<h1>Hello, World!</h1>')
+})
 
-logloglog.log('1369');
+
+server.listen
+/*
+
+   server.listen(port, () => {
+  console.log(`Server running at port ${port}`)
+})
+
+*/

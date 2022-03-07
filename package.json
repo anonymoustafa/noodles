@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/anonymoustafa/noodles/issues"
   },
-  "homepage": "https://github.com/anonymoustafa/noodles#readme"
+  "homepage": "https://github.com/anonymoustafa/noodles#readme",
+  "dependencies": {
+    "axios": "^0.26.0"
+  }
 }
