@@ -1,19 +1,16 @@
-const http = require('http')
+function mtfun() {
+        function inside_fun() {
+                function inside_inside_fun_00(){
+                        console.log('hello_00');
+                }
 
-const port = process.env.PORT || 3000
+                function inside_inside_fun_01(){
+                        console.log('hello_01');
+                }
+                return  {1 : inside_inside_fun_00(),
+                         2 : inside_inside_fun_01()};
+        }
+        return inside_fun();
+}
 
-const server = http.createServer((req, res) => {
-  res.statusCode = 200
-  res.setHeader('Content-Type', 'text/html')
-  res.end('<h1>Hello, World!</h1>')
-})
-
-
-server.listen
-/*
-
-   server.listen(port, () => {
-  console.log(`Server running at port ${port}`)
-})
-
-*/
+console.log(mtfun());
